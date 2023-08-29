@@ -18,7 +18,7 @@ class RegistrationController extends Controller
     {
         $user = User::create($request->safe()->only(['name', 'email', 'password']));
 
-        Auth::login($user);
+        Auth::login($user, boolval($request->input('remember_me', false)));
 
         return redirect('/');
     }

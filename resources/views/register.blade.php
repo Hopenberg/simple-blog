@@ -11,9 +11,7 @@
     <div class="form-group mt-3">
         <label for="emailInput">Email address</label>
         <input type="email" class="form-control" id="emailInput" name="email" value="{{ old('email') }}"
-            aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-            anyone else.</small>
+            placeholder="Enter email">
     </div>
     <div class="form-group mt-3">
         <label for="passwordInput">Password</label>

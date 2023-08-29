@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class SessionsController extends Controller
 {
     public function create()
+
     {
         return view('login');
     }
@@ -16,10 +17,10 @@ class SessionsController extends Controller
     {
         $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|min:8'
         ]);
 
-        if (Auth::attempt($credentials))
+        if (Auth::attempt($credentials, boolval($request->input('remember_me', false))))
         {
             $request->session()->regenerate();
 
@@ -27,7 +28,7 @@ class SessionsController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Credentials doesn\'t match our records.'
+            'email' => 'Credentials don\'t match our records.'
         ]);
     }
 
