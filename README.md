@@ -10,3 +10,4 @@ A simple blog with functionalities such as post adding/editing/removing, user ad
 - To ensure email password reset service is working I recommend using MailHog
 - ```php artisan serve```
 - Default user is login: ```admin@simpleblog.com``` password: ```admin123```
+
