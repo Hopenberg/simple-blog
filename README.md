@@ -9,3 +9,4 @@ A simple blog with functionalities such as post adding/editing/removing, user ad
 - ```php artisan migrate --seed```
 - ```php artisan storage:link```
 - To ensure email password reset service is working I recommend using MailHog
+- ```php artisan serve```
