@@ -14,8 +14,12 @@
                     <input name="name" type="text" class="form-control" id="nameInput" placeholder="Name"
                         value="{{ old('name', $user->name) }}">
                 </div>
-
                 @if (empty($user->id))
+                <div class="form-group mt-3">
+                    <label for="emailInput">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" name="email" placeholder="Enter email"
+                        value="{{ old('email', $user->email) }}">
+                </div>
                 <div class="form-group mt-3">
                     <label for="passwordInput">Password</label>
                     <input name="password" type="password" class="form-control" id="passwordInput"
